@@ -1,0 +1,188 @@
+/* the styles for the elements */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: open sans-serif,Helvetica,Tahoma,sans-serif;
+    font-size: 120%;
+    width: 900px;
+    margin: 0 auto;
+
+    background-color:  #fffded;
+}
+a:focus, a:hover {
+	font-style: oblique;
+}
+/* the styles for the header */
+header {
+	padding: 1.5em 0 2em 0;
+}
+header h2 {
+	padding: 1.8em;
+	font-size: 175%;
+	color: #ffffff;
+}
+header h3 {
+	padding: 1.8em;
+	font-size: 130%;
+	color: white;
+}
+header img {
+	float: left;
+    padding: 0px 30px;
+}
+.shadow {
+	text-shadow: 2px 2px 2px #000000;
+}
+
+/* the styles for the main content */
+main {
+	padding: 4em;
+	clear: left;
+}
+
+section h1 {
+	font-size: 150%;
+	padding: .5em 0 .25em 0;
+	margin: 0;
+}
+section h2 {
+	color: #000000;
+	font-size: 130%;
+	padding: .5em 0 .25em 0;
+}
+section p {
+	padding-bottom: .5em;
+}
+section blockquote {
+	padding: 0 2em;
+	font-style: italic;
+}
+section ul {
+	padding: 0 0 .25em 1.25em;
+	list-style-type: circle;
+}
+section li {
+	padding-bottom: .35em;
+}
+
+
+/* style for the tables */
+table {
+	border: 1px solid black;
+	border-collapse: collapse;}
+
+th, td {
+	border:  1px solid black;
+	padding: .2em  .7em;
+	text-align: left;
+}	
+
+
+th.left,  td.left { text-align: left; }
+
+
+/* the styles for the footer */
+
+footer p {
+	text-align: center;
+	color: white;
+	padding: 1em 0;
+}
+
+*,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: hsl(210 30% 24%);
+}
+
+h1 {
+  font-size: clamp(3rem, 15vmin, 8rem);
+  font-family: sans-serif;
+  color: hsl(0 0% 98%);
+}
+
+.underlined {
+/*   background: red; */
+  position: relative;
+}
+
+.underline-mask:after {
+  content: '';
+  position: absolute;
+  top: 95%;
+  width: 150%;
+  aspect-ratio: 3 / 1;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+  border: 6px solid hsl(280 80% 50%);
+  /* Use a conic gradient mask to hide and show the bits you want */
+  --spread: 140deg;
+  --start: 290deg;
+  -webkit-mask: conic-gradient(from var(--start), white 0 var(--spread), transparent var(--spread));
+          mask: conic-gradient(from var(--start), white 0 var(--spread), transparent var(--spread));
+}
+
+
+.underline-overflow {
+  display: inline-block;
+  /* A little extra padding and overflow hidden   */
+  overflow: hidden;
+  padding-bottom: clamp(1rem, 2vmin, 2rem);
+}
+.underline-overflow:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  height: 150%;
+  aspect-ratio: 2.5 / 1;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  border-radius: 50%;
+  border: 6px solid hsl(10 80% 50%);
+}
+
+.underline-clip:after {
+  content: '';
+  position: absolute;
+  top: 95%;
+  width: 150%;
+  aspect-ratio: 3 / 1;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+  border: 6px solid hsl(130 80% 50%);
+  /* Use a clip-path to hide and show the bits you want */
+  -webkit-clip-path: polygon(0 0, 50% 50%, 100% 0);
+          clip-path: polygon(0 0, 50% 50%, 100% 0);
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+	}
+	
+	@keyframes gradient {
+	0% {
+	background-position: 0% 50%;
+	}
+	
+	50% {
+	background-position: 100% 50%;
+	}
+	
+	100% {
+	background-position: 0% 50%;
+	}
+	}
